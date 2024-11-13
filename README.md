@@ -2,11 +2,15 @@
 
 ## Introduction
 
+## Weights
+
+[link](https://drive.google.com/drive/folders/1F6YgS3ayNfuHjjOwNMvWFpjY6IONsuhy?usp=drive_link)
+
 ## Setup
 
-- Prepare dataset: Split data in train, validation and testing and in these fake and real folders contains fake and real images respectively.
+- Prepare dataset: Split data in train, validation, and testing. These fake and real folders contain fake and real images, respectively.
 
-Directory structure is as follow:
+The directory structure is as follows:
 
 ```
    Data --
@@ -55,13 +59,13 @@ python train.py
 `<training-data-path>`: Path to the training data.<br/>
 `<model-variant>`: Specify the model variant (`ed` for Autoencoder or `vae` for Variational Autoencoder).<br/>
 `<num-epochs>`: Number of epochs for training.<br/>
-`<pretrained-model-file>` (optional): Specify the filename of a pretrained model to continue training.<br/>
-`-b` (optional): Batch size for training. Default is 32.<br/>
+`<pretrained-model-file>` (optional): Specify the filename of a pre-trained model to continue training.<br/>
+`-b` (optional): Batch size for training. The default is 32.<br/>
 `-t` (optional): Run the test on the test dataset after training.
 
 The model weights and metrics are saved in the `weight` folder.
 
-- Multi stage training:
+- Multi-stage training:
 
 ```bash
 python --d Masked_data --m ed --e 20 -b 32 -t y
